@@ -10,7 +10,6 @@ import com.bodegas.inventario.repository.BodegaRepository;
 
 import lombok.RequiredArgsConstructor;
 
-/** Registro y consulta de bodegas. */
 @Service
 @RequiredArgsConstructor
 public class BodegaService {
@@ -25,7 +24,6 @@ public class BodegaService {
         return bodegaRepository.save(bodega);
     }
 
-    /** Devuelve todas las bodegas con sus productos ya cargados. */
     @Transactional(readOnly = true)
     public List<Bodega> listar() {
         return bodegaRepository.findAllConProductos();
