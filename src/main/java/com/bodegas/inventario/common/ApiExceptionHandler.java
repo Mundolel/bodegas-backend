@@ -1,4 +1,4 @@
-package com.bodegas.inventario.common.api;
+package com.bodegas.inventario.common;
 
 import java.util.stream.Collectors;
 
@@ -12,9 +12,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-
-import com.bodegas.inventario.common.RecursoNoEncontradoException;
-import com.bodegas.inventario.common.ReglaNegocioException;
 
 /** Traduce las excepciones a respuestas ProblemDetail (RFC 9457), igual que en beta-back. */
 @RestControllerAdvice
