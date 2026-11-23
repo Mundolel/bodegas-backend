@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-/** Permite que el frontend (localhost:4200) consuma la API sin pasar por el proxy de Angular. */
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {
 
