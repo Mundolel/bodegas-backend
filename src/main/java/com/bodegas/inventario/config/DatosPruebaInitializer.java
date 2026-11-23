@@ -12,11 +12,6 @@ import com.bodegas.inventario.repository.ProductoRepository;
 
 import lombok.RequiredArgsConstructor;
 
-/**
- * Carga dos bodegas y tres productos de prueba en el primer arranque, unicamente si la base
- * de datos esta vacia: H2 persiste en archivo (./data), asi que no se duplican al reiniciar.
- * Producto no tiene servicio ni controlador; se persiste directamente con su repositorio.
- */
 @Component
 @Profile("default")
 @Transactional
