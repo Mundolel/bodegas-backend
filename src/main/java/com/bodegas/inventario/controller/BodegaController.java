@@ -19,7 +19,6 @@ import com.bodegas.inventario.service.BodegaService;
 
 import lombok.RequiredArgsConstructor;
 
-/** Registro y consulta de bodegas con sus productos asociados. */
 @RestController
 @RequestMapping("/bodegas")
 @RequiredArgsConstructor
