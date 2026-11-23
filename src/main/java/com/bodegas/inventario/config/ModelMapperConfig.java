@@ -10,10 +10,6 @@ import com.bodegas.inventario.controller.dto.ProductoResponse;
 import com.bodegas.inventario.model.Bodega;
 import com.bodegas.inventario.model.Producto;
 
-/**
- * Registra el mapeo Entity -> DTO de respuesta. Los DTO son records sin setters, por lo que
- * ModelMapper 3.2.0 no los resuelve por coincidencia de nombre: los converters son explicitos.
- */
 @Configuration
 public class ModelMapperConfig {
 
@@ -29,8 +25,6 @@ public class ModelMapperConfig {
             }
         });
 
-        // productos se deriva de la relacion 1:N; se mapea cada uno con el converter anterior
-        // para que el JSON quede anidado sin referencias circulares.
         mapper.addConverter(new AbstractConverter<Bodega, BodegaResponse>() {
             @Override
             protected BodegaResponse convert(Bodega b) {
