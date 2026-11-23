@@ -14,10 +14,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * Bodega de la empresa. Lado inverso de la relacion 1:N con Producto: la llave
- * foranea vive en la tabla productos (columna bodega_id).
- */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -38,7 +34,6 @@ public class Bodega {
     @OneToMany(mappedBy = "bodega")
     private List<Producto> productos = new ArrayList<>();
 
-    /** Mantiene sincronizados los dos lados de la relacion. */
     public void agregarProducto(Producto producto) {
         productos.add(producto);
         producto.setBodega(this);
