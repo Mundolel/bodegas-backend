@@ -13,7 +13,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/** Producto almacenado en una unica bodega (lado propietario de la relacion N:1). */
 @Getter
 @Setter
 @NoArgsConstructor
